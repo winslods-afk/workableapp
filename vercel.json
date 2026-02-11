@@ -5,5 +5,15 @@
             "src": "api/*.py",
             "use": "@vercel/python"
         }
+    ],
+    "routes": [
+        {
+            "src": "/api/employees/csv",
+            "dest": "/api/employees.py"
+        },
+        {
+            "src": "/api/employees",
+            "dest": "/api/employees.py"
+        }
     ]
 }
