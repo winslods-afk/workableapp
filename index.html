@@ -164,7 +164,7 @@
             if (!token) { errorEl.textContent = 'Please provide your token.'; return; }
             loadBtn.disabled = true; downloadBtn.disabled = true; setLoading(true, 'Fetching employees...');
             try {
-                const res = await fetch('/api/employees', {
+                const res = await fetch('https://workableapp.vercel.app/api/employees', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ token })
@@ -191,7 +191,7 @@
             if (!token) { errorEl.textContent = 'Please provide your token.'; return; }
             downloadBtn.disabled = true; setLoading(true, 'Preparing CSV...');
             try {
-                const res = await fetch('/api/employees/csv', {
+                const res = await fetch('https://workableapp.vercel.app/api/employees/csv', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ token })
